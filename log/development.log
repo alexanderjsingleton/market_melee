@@ -1322,3 +1322,87 @@ DEPRECATION WARNING: `#timestamp` was called without specifying an option for `n
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+
+
+Started GET "/" for ::1 at 2015-05-05 16:02:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 417ms (Views: 399.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-05-05 16:02:35 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (362.8ms)
+Completed 200 OK in 495ms (Views: 472.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-05 16:02:49 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mlGltFi4Mtlrm9eIHD1ABRjJlvJGTRHyXigcPlP/vNahvi76I4pYtkvm1wScsw8l61qJIwg9lD4ndhc7cOFTQA==", "user"=>{"email"=>"ajsingleton@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ajsingleton@me.com' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "155e4a9d74d9d9d72edcf7051e1e0933450b1c08724c883b397b1945e79fc7fc"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "ajsingleton@me.com"], ["encrypted_password", "$2a$10$oLG7s5gn8Rvx2S9lkiyRDuUQ2ZqJYGEJd1Od7hcOTMTnoZyW0fZZe"], ["created_at", "2015-05-05 21:02:50.078924"], ["updated_at", "2015-05-05 21:02:50.078924"], ["confirmation_token", "155e4a9d74d9d9d72edcf7051e1e0933450b1c08724c883b397b1945e79fc7fc"], ["confirmation_sent_at", "2015-05-05 21:02:50.612852"]]
+  Rendered devise/mailer/confirmation_instructions.html.erb (2.2ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 223.1ms
+
+Sent mail to ajsingleton@me.com (914.8ms)
+Date: Tue, 05 May 2015 16:02:50 -0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ajsingleton@me.com
+Message-ID: <55492ffad07a4_20b13fd66d18684c70e0@Alexs-MBP.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ajsingleton@me.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=FX7ur6ccLKYTNmp8wwQH">Confirm my account</a></p>
+
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 1784ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 16:02:51 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 97ms (Views: 96.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 16:03:04 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2015-05-05 16:03:05 -0500
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 16:03:06 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 16:03:41 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2015-05-05 16:03:42 -0500
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.0ms)
