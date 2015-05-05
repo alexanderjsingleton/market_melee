@@ -534,3 +534,301 @@ Migrating to AddStockToPortfolios (20150505145331)
             FROM sqlite_temp_master
             WHERE name='index_stocks_on_portfolio_id' AND type='index'
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "tan"], ["created_at", "2015-05-05 15:41:51.827691"], ["updated_at", "2015-05-05 15:41:51.827691"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "cyan"], ["created_at", "2015-05-05 15:41:51.834306"], ["updated_at", "2015-05-05 15:41:51.834306"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "cyan"], ["created_at", "2015-05-05 15:41:51.836463"], ["updated_at", "2015-05-05 15:41:51.836463"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "magenta"], ["created_at", "2015-05-05 15:41:51.838295"], ["updated_at", "2015-05-05 15:41:51.838295"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "gold"], ["created_at", "2015-05-05 15:41:51.840111"], ["updated_at", "2015-05-05 15:41:51.840111"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "black"], ["created_at", "2015-05-05 15:42:18.590244"], ["updated_at", "2015-05-05 15:42:18.590244"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "silver"], ["created_at", "2015-05-05 15:42:18.595664"], ["updated_at", "2015-05-05 15:42:18.595664"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "teal"], ["created_at", "2015-05-05 15:42:18.598819"], ["updated_at", "2015-05-05 15:42:18.598819"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "cyan"], ["created_at", "2015-05-05 15:42:18.601334"], ["updated_at", "2015-05-05 15:42:18.601334"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "gold"], ["created_at", "2015-05-05 15:42:18.603532"], ["updated_at", "2015-05-05 15:42:18.603532"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 10], ["stock_symbol", "k4ch"], ["created_at", "2015-05-05 15:42:18.615980"], ["updated_at", "2015-05-05 15:42:18.615980"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 2], ["stock_symbol", "q8qr"], ["created_at", "2015-05-05 15:42:18.618333"], ["updated_at", "2015-05-05 15:42:18.618333"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 2], ["stock_symbol", "pco4"], ["created_at", "2015-05-05 15:42:18.620288"], ["updated_at", "2015-05-05 15:42:18.620288"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 7], ["stock_symbol", "vqtp"], ["created_at", "2015-05-05 15:42:18.622211"], ["updated_at", "2015-05-05 15:42:18.622211"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 7], ["stock_symbol", "wwen"], ["created_at", "2015-05-05 15:42:18.624090"], ["updated_at", "2015-05-05 15:42:18.624090"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 1], ["stock_symbol", "za5o"], ["created_at", "2015-05-05 15:42:18.626027"], ["updated_at", "2015-05-05 15:42:18.626027"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 5], ["stock_symbol", "jjl3"], ["created_at", "2015-05-05 15:42:18.627931"], ["updated_at", "2015-05-05 15:42:18.627931"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 7], ["stock_symbol", "m1uz"], ["created_at", "2015-05-05 15:42:18.630043"], ["updated_at", "2015-05-05 15:42:18.630043"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 3], ["stock_symbol", "o58n"], ["created_at", "2015-05-05 15:42:18.632255"], ["updated_at", "2015-05-05 15:42:18.632255"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 2], ["stock_symbol", "lg6s"], ["created_at", "2015-05-05 15:42:18.634204"], ["updated_at", "2015-05-05 15:42:18.634204"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "portfolios"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "stocks"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "silver"], ["created_at", "2015-05-05 15:42:38.341655"], ["updated_at", "2015-05-05 15:42:38.341655"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "blue"], ["created_at", "2015-05-05 15:42:38.346924"], ["updated_at", "2015-05-05 15:42:38.346924"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "olive"], ["created_at", "2015-05-05 15:42:38.349924"], ["updated_at", "2015-05-05 15:42:38.349924"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "fuchsia"], ["created_at", "2015-05-05 15:42:38.352456"], ["updated_at", "2015-05-05 15:42:38.352456"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sky blue"], ["created_at", "2015-05-05 15:42:38.354756"], ["updated_at", "2015-05-05 15:42:38.354756"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 14], ["stock_symbol", "64xn"], ["created_at", "2015-05-05 15:42:38.366232"], ["updated_at", "2015-05-05 15:42:38.366232"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 16], ["stock_symbol", "hioy"], ["created_at", "2015-05-05 15:42:38.368698"], ["updated_at", "2015-05-05 15:42:38.368698"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 17], ["stock_symbol", "6g8t"], ["created_at", "2015-05-05 15:42:38.370632"], ["updated_at", "2015-05-05 15:42:38.370632"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 2], ["stock_symbol", "zcv9"], ["created_at", "2015-05-05 15:42:38.372572"], ["updated_at", "2015-05-05 15:42:38.372572"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 9], ["stock_symbol", "1wnh"], ["created_at", "2015-05-05 15:42:38.374525"], ["updated_at", "2015-05-05 15:42:38.374525"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 15], ["stock_symbol", "8q5e"], ["created_at", "2015-05-05 15:42:38.376484"], ["updated_at", "2015-05-05 15:42:38.376484"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 12], ["stock_symbol", "2yoc"], ["created_at", "2015-05-05 15:42:38.378782"], ["updated_at", "2015-05-05 15:42:38.378782"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 7], ["stock_symbol", "np6s"], ["created_at", "2015-05-05 15:42:38.381548"], ["updated_at", "2015-05-05 15:42:38.381548"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 4], ["stock_symbol", "3ca8"], ["created_at", "2015-05-05 15:42:38.384019"], ["updated_at", "2015-05-05 15:42:38.384019"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 14], ["stock_symbol", "6z0g"], ["created_at", "2015-05-05 15:42:38.386325"], ["updated_at", "2015-05-05 15:42:38.386325"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "portfolios"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "stocks"[0m
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "portfolios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "stock_id" integer) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_portfolios_on_stock_id" ON "portfolios" ("stock_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_portfolios_on_stock_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_portfolios_on_stock_id' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX "index_portfolios_on_user_id" ON "portfolios" ("user_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "stocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stock_symbol" varchar, "portfolio_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX "index_stocks_on_portfolio_id" ON "stocks" ("portfolio_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150505145331')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150505142853')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150505143047')[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "portfolios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "stock_id" integer) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX "index_portfolios_on_stock_id" ON "portfolios" ("stock_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_portfolios_on_stock_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_portfolios_on_stock_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX "index_portfolios_on_user_id" ON "portfolios" ("user_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "stocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stock_symbol" varchar, "portfolio_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX "index_stocks_on_portfolio_id" ON "stocks" ("portfolio_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150505145331')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150505142853')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150505143047')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "cyan"], ["created_at", "2015-05-05 15:42:47.270221"], ["updated_at", "2015-05-05 15:42:47.270221"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "ivory"], ["created_at", "2015-05-05 15:42:47.275106"], ["updated_at", "2015-05-05 15:42:47.275106"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "teal"], ["created_at", "2015-05-05 15:42:47.278456"], ["updated_at", "2015-05-05 15:42:47.278456"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "silver"], ["created_at", "2015-05-05 15:42:47.282070"], ["updated_at", "2015-05-05 15:42:47.282070"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "indigo"], ["created_at", "2015-05-05 15:42:47.284236"], ["updated_at", "2015-05-05 15:42:47.284236"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 2], ["stock_symbol", "hce3"], ["created_at", "2015-05-05 15:42:47.294920"], ["updated_at", "2015-05-05 15:42:47.294920"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 2], ["stock_symbol", "fw7l"], ["created_at", "2015-05-05 15:42:47.297664"], ["updated_at", "2015-05-05 15:42:47.297664"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 5], ["stock_symbol", "hd8r"], ["created_at", "2015-05-05 15:42:47.339933"], ["updated_at", "2015-05-05 15:42:47.339933"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 1], ["stock_symbol", "qudl"], ["created_at", "2015-05-05 15:42:47.342424"], ["updated_at", "2015-05-05 15:42:47.342424"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 2], ["stock_symbol", "62zl"], ["created_at", "2015-05-05 15:42:47.344327"], ["updated_at", "2015-05-05 15:42:47.344327"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 4], ["stock_symbol", "j0pm"], ["created_at", "2015-05-05 15:42:47.346297"], ["updated_at", "2015-05-05 15:42:47.346297"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 1], ["stock_symbol", "mbjj"], ["created_at", "2015-05-05 15:42:47.348285"], ["updated_at", "2015-05-05 15:42:47.348285"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 4], ["stock_symbol", "w6yj"], ["created_at", "2015-05-05 15:42:47.350292"], ["updated_at", "2015-05-05 15:42:47.350292"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 4], ["stock_symbol", "5apr"], ["created_at", "2015-05-05 15:42:47.352116"], ["updated_at", "2015-05-05 15:42:47.352116"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 3], ["stock_symbol", "uy3o"], ["created_at", "2015-05-05 15:42:47.354093"], ["updated_at", "2015-05-05 15:42:47.354093"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "portfolios"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "stocks"[0m
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "portfolios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "stock_id" integer) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_portfolios_on_stock_id" ON "portfolios" ("stock_id")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_portfolios_on_stock_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_portfolios_on_stock_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_portfolios_on_user_id" ON "portfolios" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "stocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stock_symbol" varchar, "portfolio_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_stocks_on_portfolio_id" ON "stocks" ("portfolio_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150505145331')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150505142853')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150505143047')[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "portfolios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "stock_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_portfolios_on_stock_id" ON "portfolios" ("stock_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_portfolios_on_stock_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_portfolios_on_stock_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX "index_portfolios_on_user_id" ON "portfolios" ("user_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "stocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stock_symbol" varchar, "portfolio_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX "index_stocks_on_portfolio_id" ON "stocks" ("portfolio_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150505145331')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150505142853')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150505143047')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "red"], ["created_at", "2015-05-05 15:42:53.138274"], ["updated_at", "2015-05-05 15:42:53.138274"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "tan"], ["created_at", "2015-05-05 15:42:53.143097"], ["updated_at", "2015-05-05 15:42:53.143097"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "silver"], ["created_at", "2015-05-05 15:42:53.145434"], ["updated_at", "2015-05-05 15:42:53.145434"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "black"], ["created_at", "2015-05-05 15:42:53.147182"], ["updated_at", "2015-05-05 15:42:53.147182"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "portfolios" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "white"], ["created_at", "2015-05-05 15:42:53.148933"], ["updated_at", "2015-05-05 15:42:53.148933"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 5], ["stock_symbol", "9so1"], ["created_at", "2015-05-05 15:42:53.159247"], ["updated_at", "2015-05-05 15:42:53.159247"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 5], ["stock_symbol", "61bk"], ["created_at", "2015-05-05 15:42:53.162363"], ["updated_at", "2015-05-05 15:42:53.162363"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 3], ["stock_symbol", "pwgq"], ["created_at", "2015-05-05 15:42:53.203753"], ["updated_at", "2015-05-05 15:42:53.203753"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 1], ["stock_symbol", "s6kp"], ["created_at", "2015-05-05 15:42:53.206268"], ["updated_at", "2015-05-05 15:42:53.206268"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 5], ["stock_symbol", "oio7"], ["created_at", "2015-05-05 15:42:53.208150"], ["updated_at", "2015-05-05 15:42:53.208150"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 1], ["stock_symbol", "xioc"], ["created_at", "2015-05-05 15:42:53.210076"], ["updated_at", "2015-05-05 15:42:53.210076"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 2], ["stock_symbol", "u98g"], ["created_at", "2015-05-05 15:42:53.212076"], ["updated_at", "2015-05-05 15:42:53.212076"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 1], ["stock_symbol", "xhg3"], ["created_at", "2015-05-05 15:42:53.214110"], ["updated_at", "2015-05-05 15:42:53.214110"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["portfolio_id", 4], ["stock_symbol", "fz45"], ["created_at", "2015-05-05 15:42:53.215934"], ["updated_at", "2015-05-05 15:42:53.215934"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stocks" ("portfolio_id", "stock_symbol", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["portfolio_id", 1], ["stock_symbol", "44n3"], ["created_at", "2015-05-05 15:42:53.217872"], ["updated_at", "2015-05-05 15:42:53.217872"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "portfolios"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "stocks"[0m
+  [1m[36mPortfolio Load (0.3ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 3]]
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 5]]
