@@ -1406,3 +1406,39 @@ Started GET "/about" for ::1 at 2015-05-05 16:03:42 -0500
 Processing by WelcomeController#about as HTML
   Rendered welcome/about.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=FX7ur6ccLKYTNmp8wwQH" for ::1 at 2015-05-05 16:06:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"FX7ur6ccLKYTNmp8wwQH"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["confirmation_token", "155e4a9d74d9d9d72edcf7051e1e0933450b1c08724c883b397b1945e79fc7fc"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "confirmation_token" = ?, "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["confirmation_token", nil], ["confirmed_at", "2015-05-05 21:06:15.882957"], ["updated_at", "2015-05-05 21:06:15.883507"], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 904ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-05 16:06:16 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 356ms (Views: 353.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-05-05 16:08:50 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ABK2wyqGInaosM6r3GCUZ5/yNdWrtrfZw5jT62jNzSs7/T2NUbRIGYjNzidc7ttHbGEqBOXGMhW6xtjuS9MivQ==", "user"=>{"email"=>"ajsingleton@me.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "ajsingleton@me.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-05-05 21:08:51.022728"], ["current_sign_in_at", "2015-05-05 21:08:51.022728"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-05-05 21:08:51.023888"], ["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 87ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 16:08:51 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 101ms (Views: 100.8ms | ActiveRecord: 0.0ms)
