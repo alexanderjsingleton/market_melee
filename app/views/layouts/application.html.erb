@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>melee</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_link_tag    "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
+    <title>market_melee</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-     <div class="container">
-       <ul class="nav nav-tabs">
-        <li><%= link_to "melee", welcome_index_path %></li>
-        <li><%= link_to "About", welcome_about_path %></li>
-      </ul>
+    <div class ="container">
+      <h1 class ='text'><%= link_to "market_melee", root_path %></h1>
+      <ul>
+        <ul class ="nav nav-tabs">
+              <li><%= link_to "Home", welcome_index_path %></li>
+              <li><%= link_to "About", welcome_about_path %></li>
+              
+        </ul>
 
-      <%= yield %>
-     </div>
+  <%= yield %>
 
+    </div>
   </body>
 </html>
