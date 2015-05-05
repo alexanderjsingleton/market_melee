@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   resources :portfolios
 
-  get 'welcome/index'
-  get 'welcome/about'
+  # get 'welcome/index'
+  # get 'welcome/about'
+  get 'about' => 'welcome#about'
   
     root to: 'welcome#index'
 
