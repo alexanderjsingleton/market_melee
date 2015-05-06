@@ -1,14 +1,42 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @portfolio.name %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @portfolio.user %>
-</p>
+<div class="row">
+  <div class="col-md-8"> 
+    <h1><%= @portfolio.name %></h1>
+    <h3><%= link_to @portfolio.name, @portfolio.name, :target => "_blank" %></h3>
+  <div>
+  <div class='row'>
+    <div class='col-md-8'>
+      <table class="table table-striped">
+        <tbody>
+          <thead>
+            <td class="text-uppercase">Stock Name</td>
+            <td class="text-uppercase">Stock Count</td>
+          </thead>
+          <% @stocks.inspect =%>
+          <% @stocks.each do |stock_quote, stocks| %>
+            <tr>
+            <td><%= stock_quote %></td>
+            <td><%= stocks.count %></td>
+          </tr>
+          <% end %>
+         
+        </tbody>
+      </table>
+       <%= pie_chart @portfolio.stocks.group(:stock_symbol).count %>
+      <%= line_chart @portfolio.stocks.group(:created_at).count %>
+    </div>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class="bloc_buttons">
+          <%= link_to " Edit", edit_portfolio_path(@portfolio), class: 'btn btn-success glyphicon glyphicon-edit' %>
+          <%= link_to " Delete", portfolio_path, method: :delete, data: { confirm: 'Are you sure you want to delete this portfolio?'}, id: 'delete-site', class: 'btn btn-danger glyphicon glyphicon-remove' %>
+        </div>
+          <%= link_to "Back to Portfolio List", portfolios_path , class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
-<%= link_to 'Back', portfolios_path %>
+
+

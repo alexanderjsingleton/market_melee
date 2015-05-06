@@ -11,6 +11,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/1.json
   def show
     @portfolio = Portfolio.find(params[:id])
+    @stocks = @portfolio.stocks.group_by(&:stock_symbol)
   end
 
   # GET /portfolios/new
