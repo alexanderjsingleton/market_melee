@@ -11,18 +11,15 @@
       <h1 class ='text'><%= link_to "market_melee", root_path %></h1>
       <ul>
         <ul class ="nav nav-tabs">
-              <li><%= link_to "Home", welcome_index_path %></li>
-              <li><%= link_to "About", welcome_about_path %></li>
-              <li><%= link_to "Portfolios", portfolios_path %></li>
-
-              <div class="pull-right user-info">
-               <% if current_user %>
-                 Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-               <% else %>
-                 <%= link_to "Sign In", new_user_session_path %> or
-                 <%= link_to "Sign Up", new_user_registration_path %>
-               <% end %>
-             </div>
+          <div class="pull-right user-info">
+            <%= link_to " ", root_path, class: 'glyphicon glyphicon-home' %>
+            <% if current_user %>
+              Hello <%= link_to (current_user.username || current_user.name || current_user.email), edit_user_registration_path %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to "Sign In", new_user_session_path %> or
+              <%= link_to "Sign Up", new_user_registration_path %>
+            <% end %>
+          </div>
               
         </ul>
 

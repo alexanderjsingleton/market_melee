@@ -1,47 +1,58 @@
-Rails.application.routes.draw do
+# Rails.application.routes.draw do
 
-  # get 'applications/index'
+#   # get 'applications/index'
 
-  # get 'applications/show'
+#   # get 'applications/show'
 
-  # get 'applications/new'
+#   # get 'applications/new'
 
-  # get 'applications/edit'
+#   # get 'applications/edit'
 
-  resources :stocks
+#   resources :stocks
  
 
-  resources :portfolios do
-     resources :stocks, except: [:index]
-  end
+#   resources :portfolios do
+#      resources :stocks, except: [:index]
+#   end
 
   
 
+#   devise_for :users
+#   get 'welcome/index'
+
+#   get 'welcome/about'
+
+#   get 'portfolios' => 'welcome/portfolios#index'
+
+
+
+#     root to: 'welcome#index'
+
+# end
+
+
+Rails.application.routes.draw do
+  
   devise_for :users
-  get 'welcome/index'
+  resources :portfolios
 
-  get 'welcome/about'
+  namespace :api, defaults: { format: :json } do
+    resources :stocks, only: [:create]
+    match 'stocks' => "stocks#create", via: :options, as: :stocks_alternatives
+  end
 
-  get 'portfolios' => 'welcome/portfolios#index'
+  authenticated :user do
+    root to: "portfolios#index", as: :authenticated_root, via: :get
+  end
+
+  unauthenticated do
+    root 'welcome#index'
+  end
+
+end
 
 
 
-    root to: 'welcome#index'
-
-  # #1
-   namespace :api, defaults: { format: :json } do
-  # #2
-     resources :events, only: [:create]
-     match 'events' => "events#create", via: :options, as: :events_options
-   end
-
-  # authenticated :user do
-  #   root to: "registered_applications#index", as: :authenticated_root, via: :get
-  # end
-
-  # unauthenticated do
-  #   root 'welcome#index'
-  # end
 
  
-end
+
