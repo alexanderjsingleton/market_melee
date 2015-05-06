@@ -14,6 +14,14 @@ class User < ActiveRecord::Base
     length: {maximum: 255},
     format: { with: /\A[a-zA-Z0-9]*\z/, message: "may only contain letters and numbers." }
 
+ def admin?
+   role == 'admin'
+ end
+ 
+ def moderator?
+   role == 'moderator'
+ end
+
   attr_accessor :login
 
   def self.find_first_by_auth_conditions(warden_conditions)

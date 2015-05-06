@@ -6,6 +6,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios.json
   def index
     @portfolios = Portfolio.all
+      authorize @portfolios
   end
 
   # GET /portfolios/1
@@ -18,16 +19,20 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/new
   def new
     @portfolio = Portfolio.new
+      authorize @portfolio
   end
 
   # GET /portfolios/1/edit
   def edit
+    @portfolio = Portfolio.find(params[:id])
+      authorize @portfolio
   end
 
   # POST /portfolios
   # POST /portfolios.json
   def create
     @portfolio = Portfolio.new(portfolio_params)
+      authorize @post
 
     respond_to do |format|
       if @portfolio.save
@@ -43,6 +48,8 @@ class PortfoliosController < ApplicationController
   # PATCH/PUT /portfolios/1
   # PATCH/PUT /portfolios/1.json
   def update
+    @portfolio = Portfolio.new(portfolio_params)
+      authorize @portfolio
     respond_to do |format|
       if @portfolio.update(portfolio_params)
         format.html { redirect_to @portfolio, notice: 'Portfolio was successfully updated.' }

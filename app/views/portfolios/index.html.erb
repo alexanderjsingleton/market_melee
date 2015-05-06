@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Portfolios</h1>
+<% if policy(Portfolio.new).create? %>
+ <%= link_to "New Portfolio", new_portfolio_path, class: 'btn btn-success' %>
+ <% end %>
 
 <table>
   <thead>
