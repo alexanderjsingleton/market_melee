@@ -1,6 +1,7 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
-
+  # before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+    protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
   # GET /portfolios
   # GET /portfolios.json
   def index
@@ -73,4 +74,10 @@ class PortfoliosController < ApplicationController
     def portfolio_params
       params.require(:portfolio).permit(:name, :user_id)
     end
+
+    def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :username, :email, :password, :password_confirmation, :remember_me) }
+    devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :username, :email, :password, :remember_me) }
+    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :username, :email, :password, :password_confirmation, :current_password) }
+  end
 end
