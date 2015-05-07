@@ -34,7 +34,11 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  resources :portfolios
+  resources :users, only: [:update, :show]
+  
+  resources :portfolios do
+    resources :stocks, only: [:create, :destroy]
+  end
 
   namespace :api, defaults: { format: :json } do
     resources :stocks, only: [:create]
