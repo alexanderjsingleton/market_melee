@@ -40,6 +40,8 @@ Rails.application.routes.draw do
     resources :stocks, only: [:create, :destroy]
   end
 
+  resources :stocks
+
   namespace :api, defaults: { format: :json } do
     resources :stocks, only: [:create]
     match 'stocks' => "stocks#create", via: :options, as: :stocks_alternatives

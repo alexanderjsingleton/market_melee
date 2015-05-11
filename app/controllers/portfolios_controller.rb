@@ -2,10 +2,11 @@ class PortfoliosController < ApplicationController
   # before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
     protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :authenticate_user!
   # GET /portfolios
   # GET /portfolios.json
   def index
-    @portfolios = Portfolio.all
+    @portfolios = current_user.portfolios
       authorize @portfolios
   end
 
@@ -14,6 +15,7 @@ class PortfoliosController < ApplicationController
   def show
     @portfolio = Portfolio.find(params[:id])
     @stocks = @portfolio.stocks.group_by(&:stock_symbol)
+    @stock = Stock.new
   end
 
   # GET /portfolios/new
@@ -32,17 +34,9 @@ class PortfoliosController < ApplicationController
   # POST /portfolios.json
   def create
     @portfolio = Portfolio.new(portfolio_params)
-      authorize @post
-
-    respond_to do |format|
-      if @portfolio.save
-        format.html { redirect_to @portfolio, notice: 'Portfolio was successfully created.' }
-        format.json { render :show, status: :created, location: @portfolio }
-      else
-        format.html { render :new }
-        format.json { render json: @portfolio.errors, status: :unprocessable_entity }
-      end
-    end
+    @portfolio.user = current_user
+    @portfolio.save
+    redirect_to portfolios_path
   end
 
   # PATCH/PUT /portfolios/1

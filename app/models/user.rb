@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :stocks
+  has_many :portfolios
 
   validates :username,
     :presence => true,
