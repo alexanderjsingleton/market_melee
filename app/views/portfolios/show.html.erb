@@ -28,6 +28,34 @@
        <%= pie_chart @portfolio.stocks.group(:stock_symbol).count %>
       <%= line_chart @portfolio.stocks.group(:created_at).count %>
     </div>
+    <div class='col-md-4'>
+      <%= form_for(@stock) do |f| %>
+        <% if @stock.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@stock.errors.count, "error") %> prohibited this stock from being saved:</h2>
+
+            <ul>
+            <% @stock.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :stock_symbol %><br>
+          <%= f.text_field :stock_symbol %>
+        </div>
+        
+          <%= f.hidden_field(:portfolio_id) %>
+   
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+
+
+    </div>
     <div class='row'>
       <div class='col-md-8'>
         <div class="bloc_buttons">
@@ -39,31 +67,6 @@
     </div>
   </div>
 </div>
-<%= form_for(@stock) do |f| %>
-  <% if @stock.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@stock.errors.count, "error") %> prohibited this stock from being saved:</h2>
-
-      <ul>
-      <% @stock.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :stock_symbol %><br>
-    <%= f.text_field :stock_symbol %>
-  </div>
-  <div class="field">
-    <%= f.label :portfolio_id %><br>
-    <%= f.text_field :portfolio_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
 
 
 

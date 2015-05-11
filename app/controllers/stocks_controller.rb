@@ -25,16 +25,10 @@ class StocksController < ApplicationController
   # POST /stocks.json
   def create
     @stock = Stock.new(stock_params)
+    @stock.save 
+    redirect_to :back
 
-    respond_to do |format|
-      if @stock.save
-        format.html { redirect_to @stock, notice: 'Stock was successfully created.' }
-        format.json { render :show, status: :created, location: @stock }
-      else
-        format.html { render :new }
-        format.json { render json: @stock.errors, status: :unprocessable_entity }
-      end
-    end
+   
   end
 
   # PATCH/PUT /stocks/1
