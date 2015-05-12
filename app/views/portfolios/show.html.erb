@@ -19,7 +19,7 @@
           <% @stocks.each do |stock_quote, stocks| %>
             <tr>
             <td><%= stock_quote %></td>
-            <td><%= puts stocks %></td>
+            <td><%= stocks %></td>
           </tr>
           <% end %>
          
@@ -43,7 +43,7 @@
         <% end %>
 
         <div class="field">
-          <%= f.label :stock_symbol %><br>
+          <%= f.label :stocks %><br>
           <%= f.text_field :stock_symbol %>
         </div>
         
