@@ -49,6 +49,7 @@ gem 'chartkick'
 gem 'groupdate'
 gem 'pundit'
 gem 'yahoo-finance'
+gem 'stock_quote'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,4 +1,5 @@
 class StocksController < ApplicationController
+  require 'yahoo_finance'
   before_action :set_stock, only: [:show, :edit, :update, :destroy]
 
   # GET /stocks

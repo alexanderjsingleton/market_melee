@@ -15,6 +15,7 @@ class PortfoliosController < ApplicationController
   def show
     @portfolio = Portfolio.find(params[:id])
     @stocks = @portfolio.stocks.group_by(&:stock_symbol)
+    @stocks = YahooFinance.quotes(["BVSP", "NATU3.SA", "USDJPY=X"], [:ask], { raw: false } )
     @stock = Stock.new
     @stock.portfolio_id = @portfolio.id
   end

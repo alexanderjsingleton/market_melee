@@ -10204,3 +10204,1620 @@ Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.4ms)
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+
+
+Started GET "/" for ::1 at 2015-05-12 09:29:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered portfolios/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 516ms (Views: 494.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 09:29:09 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.6ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (380.5ms)
+Completed 200 OK in 507ms (Views: 493.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:29:49 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 55ms (Views: 51.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:30:25 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 139ms (Views: 136.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:30:25 -0500
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:30:26 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 66ms (Views: 62.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:30:26 -0500
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:30:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (298.7ms)
+Completed 200 OK in 790ms (Views: 722.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:30:42 -0500
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:31:10 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:31:10 -0500
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:31:11 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 129ms (Views: 126.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:31:11 -0500
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:31:26 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:31:26 -0500
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:32:25 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.2ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:32:25 -0500
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:32:26 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 87ms (Views: 83.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:32:27 -0500
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:32:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (298.7ms)
+Completed 200 OK in 781ms (Views: 682.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:32:39 -0500
+
+
+Started GET "/portfolios" for ::1 at 2015-05-12 09:32:59 -0500
+Processing by PortfoliosController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered portfolios/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 09:33:00 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 127ms (Views: 123.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 09:33:50 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:33:50 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:33:51 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:33:51 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:33:51 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:33:51 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:33:51 -0500
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 09:33:52 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:33:52 -0500
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 09:34:06 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 124ms (Views: 121.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 09:34:06 -0500
+
+
+Started GET "/portfolios" for ::1 at 2015-05-12 09:46:00 -0500
+Processing by PortfoliosController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered portfolios/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 193ms (Views: 81.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/portfolios/8" for ::1 at 2015-05-12 09:46:01 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mStock Load (0.2ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 8]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 8]]
+  Rendered portfolios/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 209ms (Views: 192.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 09:46:05 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stocks/9" for ::1 at 2015-05-12 09:46:27 -0500
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mStock Load (0.1ms)[0m  SELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered stocks/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `stock_symbol' for #<Portfolio:0x007fcc6bf18eb8>):
+     7: 
+     8: <p>
+     9:   <strong>Portfolio:</strong>
+    10:   <%= @stock.portfolio.stock_symbol %>
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_stock_path(@stock) %> |
+  app/views/stocks/show.html.erb:10:in `_app_views_stocks_show_html_erb__3045374570855311508_70257980474860'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (42.5ms)
+
+
+Started GET "/stocks/amgn" for ::1 at 2015-05-12 09:46:39 -0500
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"amgn"}
+  [1m[35mStock Load (0.1ms)[0m  SELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Stock with 'id'=amgn):
+  app/controllers/stocks_controller.rb:62:in `set_stock'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.8ms)
+
+
+Started GET "/stocks/1" for ::1 at 2015-05-12 09:46:43 -0500
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStock Load (0.1ms)[0m  [1mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered stocks/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `stock_symbol' for #<Portfolio:0x007fcc6beea298>):
+     7: 
+     8: <p>
+     9:   <strong>Portfolio:</strong>
+    10:   <%= @stock.portfolio.stock_symbol %>
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_stock_path(@stock) %> |
+  app/views/stocks/show.html.erb:10:in `_app_views_stocks_show_html_erb__3045374570855311508_70257980474860'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.2ms)
+
+
+Started GET "/stocks/" for ::1 at 2015-05-12 09:47:04 -0500
+Processing by StocksController#index as HTML
+  [1m[36mStock Load (0.2ms)[0m  [1mSELECT "stocks".* FROM "stocks"[0m
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered stocks/index.html.erb within layouts/application (15.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 138ms (Views: 136.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stocks/" for ::1 at 2015-05-12 11:34:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StocksController#index as HTML
+  [1m[35mStock Load (0.2ms)[0m  SELECT "stocks".* FROM "stocks"
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered stocks/index.html.erb within layouts/application (36.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 550ms (Views: 487.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 11:34:34 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 11:34:35 -0500
+
+
+Started GET "/portfolios" for ::1 at 2015-05-12 11:34:43 -0500
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPortfolio Load (0.2ms)[0m  SELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."user_id" = ?  [["user_id", 1]]
+  Rendered portfolios/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 128ms (Views: 63.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/portfolios" for ::1 at 2015-05-12 11:34:43 -0500
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."user_id" = ?  [["user_id", 1]]
+  Rendered portfolios/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:34:46 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (wrong number of arguments (0 for 1..3)):
+  app/controllers/portfolios_controller.rb:17:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (50.1ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:34:46 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (wrong number of arguments (0 for 1..3)):
+  app/controllers/portfolios_controller.rb:17:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (22.2ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:35:51 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+Completed 500 Internal Server Error in 86ms
+
+ArgumentError (wrong number of arguments (0 for 1..3)):
+  app/controllers/portfolios_controller.rb:17:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (65.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.6ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:36:53 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPortfolio Load (0.2ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mStock Load (0.2ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?[0m  [["portfolio_id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol[0m  [["portfolio_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (363.6ms)
+Completed 200 OK in 518ms (Views: 479.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:36:53 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 11:36:53 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 11:36:53 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 11:36:53 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:36:53 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 11:36:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 11:36:53 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 11:36:54 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 11:36:54 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:36:54 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:36:54 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:36:54 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 11:36:54 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 11:36:54 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 11:36:54 -0500
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:37:21 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mStock Load (0.1ms)[0m  [1mSELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?[0m  [["portfolio_id", 9]]
+Completed 500 Internal Server Error in 31ms
+
+ArgumentError (wrong number of arguments (0 for 1..3)):
+  app/controllers/portfolios_controller.rb:18:in `show'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.4ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:39:08 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 241ms (Views: 66.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 11:39:09 -0500
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:39:25 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 284ms (Views: 124.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 11:39:25 -0500
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:39:52 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 192ms (Views: 64.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 11:39:52 -0500
+
+
+Started GET "/stocks/9" for ::1 at 2015-05-12 11:40:11 -0500
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mStock Load (0.1ms)[0m  SELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mPortfolio Load (0.2ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered stocks/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `stock_symbol' for #<Portfolio:0x007fc9a15b0fc8>):
+     7: 
+     8: <p>
+     9:   <strong>Portfolio:</strong>
+    10:   <%= @stock.portfolio.stock_symbol %>
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_stock_path(@stock) %> |
+  app/views/stocks/show.html.erb:10:in `_app_views_stocks_show_html_erb___1994939330595130545_70251986066580'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (25.8ms)
+
+
+Started GET "/stocks/" for ::1 at 2015-05-12 11:40:14 -0500
+Processing by StocksController#index as HTML
+  [1m[35mStock Load (0.2ms)[0m  SELECT "stocks".* FROM "stocks"
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered stocks/index.html.erb within layouts/application (11.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stocks/19" for ::1 at 2015-05-12 11:40:18 -0500
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mStock Load (0.1ms)[0m  [1mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered stocks/show.html.erb within layouts/application (78.6ms)
+Completed 500 Internal Server Error in 81ms
+
+ActionView::Template::Error (undefined method `stock_symbol' for #<Portfolio:0x007fc9a1db0bd8>):
+     7: 
+     8: <p>
+     9:   <strong>Portfolio:</strong>
+    10:   <%= @stock.portfolio.stock_symbol %>
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_stock_path(@stock) %> |
+  app/views/stocks/show.html.erb:10:in `_app_views_stocks_show_html_erb___1994939330595130545_70251990290500'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (87.9ms)
+
+
+Started GET "/stocks/19" for ::1 at 2015-05-12 11:40:18 -0500
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mStock Load (0.1ms)[0m  [1mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mPortfolio Load (0.1ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered stocks/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `stock_symbol' for #<Portfolio:0x007fc99fbc43f8>):
+     7: 
+     8: <p>
+     9:   <strong>Portfolio:</strong>
+    10:   <%= @stock.portfolio.stock_symbol %>
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_stock_path(@stock) %> |
+  app/views/stocks/show.html.erb:10:in `_app_views_stocks_show_html_erb___1994939330595130545_70251986066580'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (90.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (11.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (24.6ms)
+
+
+Started POST "/stocks" for ::1 at 2015-05-12 11:40:34 -0500
+Processing by StocksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kf8A3qsjNKPDc65ak69iVbyfk3OI+IR+qhl5A3x5osK8aOcGakE3/gfjgwDJyfUHpvo132tVX/w56qwcCcyDkQ==", "stock"=>{"stock_symbol"=>"AMGN", "portfolio_id"=>"9"}, "commit"=>"Create Stock"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "stocks" ("stock_symbol", "portfolio_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["stock_symbol", "AMGN"], ["portfolio_id", 9], ["created_at", "2015-05-12 16:40:34.588990"], ["updated_at", "2015-05-12 16:40:34.588990"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/portfolios/9
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:40:34 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 187ms (Views: 64.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:41:41 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 93ms (Views: 61.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 11:41:41 -0500
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:43:27 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered portfolios/show.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 176ms
+
+ActionView::Template::Error (undefined method `count' for nil:NilClass):
+    19:           <% @stocks.each do |stock_quote, stocks| %>
+    20:             <tr>
+    21:             <td><%= stock_quote %></td>
+    22:             <td><%= stocks.count %></td>
+    23:           </tr>
+    24:           <% end %>
+    25:          
+  app/views/portfolios/show.html.erb:22:in `block in _app_views_portfolios_show_html_erb__3642759143751561107_70251984411720'
+  app/views/portfolios/show.html.erb:19:in `each'
+  app/views/portfolios/show.html.erb:19:in `_app_views_portfolios_show_html_erb__3642759143751561107_70251984411720'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (10.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (23.2ms)
+
+
+Started GET "/portfolios/9" for ::1 at 2015-05-12 11:44:22 -0500
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPortfolio Load (0.1ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mStock Load (0.1ms)[0m  SELECT "stocks".* FROM "stocks" WHERE "stocks"."portfolio_id" = ?  [["portfolio_id", 9]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) AS count_all, stock_symbol AS stock_symbol FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY stock_symbol  [["portfolio_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) AS count_all, created_at AS created_at FROM "stocks" WHERE "stocks"."portfolio_id" = ? GROUP BY created_at[0m  [["portfolio_id", 9]]
+  Rendered portfolios/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 444ms (Views: 61.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/portfolios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/welcome.self-50ff86034043036baf488c765657a4f7c3412588f95dee05d4bfdd01e1a234c9.css?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/application.self-f165796149eb56615f2bc2e4061025fae007aa2b31805ddc48b42cd66ed9fd5e.css?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/scaffolds.self-59340bd05e964c3371b4a6d72347a5d88cf133898187ba8087bdd9ab728a642a.css?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/portfolios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for ::1 at 2015-05-12 11:44:23 -0500
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2015-05-12 11:44:23 -0500
