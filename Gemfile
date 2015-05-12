@@ -48,6 +48,7 @@ gem 'figaro', '1.0'
 gem 'chartkick'
 gem 'groupdate'
 gem 'pundit'
+gem 'yahoo-finance'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
