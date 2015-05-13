@@ -1,5 +1,4 @@
 class PortfoliosController < ApplicationController
-  :attr_accessor
   # before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
     protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
