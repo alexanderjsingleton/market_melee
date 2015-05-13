@@ -16,10 +16,10 @@
             <td class="text-uppercase">Stock Symbol</td>
           </thead>
           <% @stocks.inspect =%>
-          <% @stocks.each do |data, portfolio| %>
+          <% @stocks.each do |data| %>
             <tr>
             <td><%= data %></td>
-            <td><%= @portfolio.stocks.name %></td>
+            <td><%= data.symbol %></td>
           </tr>
           <% end %>
          

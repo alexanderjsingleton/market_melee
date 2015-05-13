@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  :attr_accessor
   # before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
     protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -17,7 +18,10 @@ class PortfoliosController < ApplicationController
 
     
     # @stocks = YahooFinance.quotes([@portfolio.stocks.group_by(&:stock_symbol)], [:ask, :bid], { raw: false } )
-    @stocks = YahooFinance.quotes(@portfolio.stocks.group_by(&:stock_symbol), [:ask, :bid], { raw: false } )
+    
+    @stocks = YahooFinance.quotes(@portfolio.stocks.group_by(&:stock_symbol), [:ask, :bid, :symbol], { raw: false } )
+    
+
     @stock = Stock.new
     @stock.portfolio_id = @portfolio.id
   end
