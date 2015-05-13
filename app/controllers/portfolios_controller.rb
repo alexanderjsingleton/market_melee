@@ -19,7 +19,7 @@ class PortfoliosController < ApplicationController
     
     # @stocks = YahooFinance.quotes([@portfolio.stocks.group_by(&:stock_symbol)], [:ask, :bid], { raw: false } )
     
-    @stocks = YahooFinance.quotes(@portfolio.stocks.group_by(&:stock_symbol), [:ask, :bid, :symbol], { raw: false } )
+    @stocks = YahooFinance.quotes(@portfolio.stocks.group_by(&:stock_symbol), [:ask, :bid, :symbol, :last_trade_price], { raw: false } )
     
 
     @stock = Stock.new

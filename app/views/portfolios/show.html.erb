@@ -12,14 +12,15 @@
       <table class="table table-striped">
         <tbody>
           <thead>
-            <td class="text-uppercase">Stock Name</td>
             <td class="text-uppercase">Stock Symbol</td>
+            <td class="text-uppercase">Stock Price</td>
           </thead>
           <% @stocks.inspect =%>
           <% @stocks.each do |data| %>
             <tr>
-            <td><%= data %></td>
             <td><%= data.symbol %></td>
+            <td><%= data.last_trade_price %></td>
+         
           </tr>
           <% end %>
          
