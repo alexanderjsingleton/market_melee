@@ -16,10 +16,10 @@
             <td class="text-uppercase">Stock Count</td>
           </thead>
           <% @stocks.inspect =%>
-          <% @stocks.each do |stock_quote, stocks| %>
+          <% @stocks.each do |data, portfolio| %>
             <tr>
-            <td><%= stock_quote %></td>
-            <td><%= stocks %></td>
+            <td><%= data %></td>
+            <td><%= @portfolio.stocks.name %></td>
           </tr>
           <% end %>
          
