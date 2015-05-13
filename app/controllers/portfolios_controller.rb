@@ -16,9 +16,12 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.find(params[:id])
 
     
-    @stocks = YahooFinance.quotes([@portfolio.stocks.group_by(&:stock_symbol)], [:ask, :bid], { raw: false } )
+    # @stocks = YahooFinance.quotes([@portfolio.stocks.group_by(&:stock_symbol)], [:ask, :bid], { raw: false } )
+    @stocks = YahooFinance.quotes(@portfolio.stocks.group_by(&:stock_symbol), [:ask, :bid], { raw: false } )
     @stock = Stock.new
     @stock.portfolio_id = @portfolio.id
+
+  
   end
 
   # GET /portfolios/new
