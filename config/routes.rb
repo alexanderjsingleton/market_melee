@@ -40,7 +40,7 @@ Rails.application.routes.draw do
     resources :stocks, only: [:create, :destroy]
   end
 
-  # resources :stocks
+  resources :stocks
 
   namespace :api, defaults: { format: :json } do
     resources :stocks, only: [:create]

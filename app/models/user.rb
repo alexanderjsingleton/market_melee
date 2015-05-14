@@ -7,14 +7,6 @@ class User < ActiveRecord::Base
   has_many :stocks
   has_many :portfolios
 
-  validates :username,
-    :presence => true,
-    :uniqueness => {
-      :case_sensitive => false
-    },
-    length: {maximum: 255},
-    format: { with: /\A[a-zA-Z0-9]*\z/, message: "may only contain letters and numbers." }
-
  def admin?
    role == 'admin'
  end
