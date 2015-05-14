@@ -17,7 +17,10 @@ class PortfoliosController < ApplicationController
 
     
     # @stocks = YahooFinance.quotes([@portfolio.stocks.group_by(&:stock_symbol)], [:ask, :bid], { raw: false } )
-    
+    # additional resources :
+      # https://github.com/herval/yahoo-finance
+      # https://github.com/rlazoti/yahoofinance-example/blob/master/view_stocks.rb
+
     @stocks = YahooFinance.quotes(@portfolio.stocks.group_by(&:stock_symbol), [:ask, :bid, :symbol, :last_trade_price], { raw: false } )
     
 
