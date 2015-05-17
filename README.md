@@ -8,4 +8,4 @@
 6. As a user, I want to use JavaScript to capture client-side stocks in my portfolio 2
 7. As a user, I want to see a graph of stocks for each registered portfolio  
 
-Hosted @Heroku: [http://melee.herokuapp.com/][#marketmelee]
+Hosted @Heroku: [http://melee.herokuapp.com/]
